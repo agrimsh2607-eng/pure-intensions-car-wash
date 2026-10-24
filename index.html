@@ -1,0 +1,2149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure Intensions Mobile Car Wash &amp; Detail | Los Angeles 24/7 Mobile Detailing for All Makes &amp; Models</title>
+  <meta name="description" content="Pure Intensions mobile car wash & detail. Rated 4.7 stars (34 reviews). Open 24 hours. Serving Downtown LA, The Orsini Apartments & Greater Los Angeles. Mobile car wash and detailing for all vehicles, sedans, SUVs, trucks, luxury and exotics. Call +1 346-377-3170.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              300: '#F5E296',
+              400: '#E5C158',
+              500: '#D4AF37',
+              600: '#AA771C',
+              700: '#8A5D0F',
+            },
+            obsidian: '#08090C',
+            carbon: '#101217',
+            cardbg: '#151821'
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Three.js and OrbitControls for 3D Interactive Detailing Bay -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#08090C] text-slate-100 antialiased selection:bg-yellow-500 selection:text-black">
+
+  <!-- Top 24/7 Dispatch Banner -->
+  <div class="bg-gradient-to-r from-yellow-700 via-yellow-600 to-yellow-800 text-black py-2 px-4 text-xs font-semibold shadow-inner">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 live-pulse"></span>
+        <span class="uppercase tracking-wider font-bold">24/7 Mobile Car Wash &amp; Detailing:</span>
+        <span class="hidden sm:inline">We Come To You Anywhere in Los Angeles &bull; All Makes &amp; Models</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1 font-bold">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-black stroke-black"></i>
+          4.7 Rating (34 Google Reviews)
+        </span>
+        <a href="tel:+13463773170" class="hover:underline flex items-center gap-1 font-bold">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5"></i> +1 346-377-3170
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header id="navbar" class="sticky top-0 z-40 glass-header transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-700 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+          <i data-lucide="sparkles" class="w-6 h-6 text-black"></i>
+        </div>
+        <div>
+          <div class="font-serif text-lg sm:text-xl font-bold tracking-wider text-white group-hover:text-yellow-400 transition-colors uppercase">
+            Pure Intensions
+          </div>
+          <div class="text-[10px] sm:text-xs text-yellow-400/90 font-medium tracking-widest uppercase">
+            Mobile Car Wash &amp; Detail
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#3d-studio" class="text-yellow-400 font-bold hover:text-white transition-colors flex items-center gap-1">
+          <i data-lucide="box" class="w-3.5 h-3.5"></i> 3D Studio
+        </a>
+        <a href="#vehicles" class="hover:text-yellow-400 transition-colors">All Vehicles</a>
+        <a href="#services" class="hover:text-yellow-400 transition-colors">Services</a>
+        <a href="#calculator" class="hover:text-yellow-400 transition-colors">Build Quote</a>
+        <a href="#before-after" class="hover:text-yellow-400 transition-colors">Before &amp; After</a>
+        <a href="#gallery" class="hover:text-yellow-400 transition-colors">Gallery</a>
+        <a href="#reviews" class="hover:text-yellow-400 transition-colors flex items-center gap-1">
+          Reviews <span class="bg-yellow-500/20 text-yellow-400 text-[11px] px-1.5 py-0.5 rounded font-bold">4.7★</span>
+        </a>
+        <a href="#location" class="hover:text-yellow-400 transition-colors">Location</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="tel:+13463773170" class="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 text-xs font-semibold hover:border-yellow-500 transition-colors">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-yellow-400"></i>
+          <span>(346) 377-3170</span>
+        </a>
+        <button class="open-booking-modal-btn px-4 py-2.5 rounded-lg shimmer-btn text-black text-xs font-bold uppercase tracking-wider shadow-lg hover:brightness-110 transition-all flex items-center gap-1.5" data-service="Complete Signature Full Detail">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book 24/7 Mobile</span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Hamburger -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-300 hover:text-yellow-400 hover:bg-slate-800 focus:outline-none">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-950 border-b border-slate-800 px-4 pt-3 pb-6 space-y-3">
+      <div class="py-2 border-b border-slate-800/80 flex items-center justify-between text-xs text-yellow-400 font-semibold">
+        <span>📍 550 N Figueroa St, Los Angeles, CA</span>
+        <span class="text-emerald-400">● Open 24 Hours</span>
+      </div>
+      <a href="#3d-studio" class="block py-2 text-sm text-yellow-400 font-bold hover:underline flex items-center gap-2">
+        <i data-lucide="box" class="w-4 h-4"></i> Interactive 3D Detailing Bay
+      </a>
+      <a href="#vehicles" class="block py-2 text-sm text-slate-200 hover:text-yellow-400">All Vehicles Serviced</a>
+      <a href="#services" class="block py-2 text-sm text-slate-200 hover:text-yellow-400">Service Packages</a>
+      <a href="#calculator" class="block py-2 text-sm text-slate-200 hover:text-yellow-400">Custom Package Builder</a>
+      <a href="#before-after" class="block py-2 text-sm text-slate-200 hover:text-yellow-400">Before &amp; After Results</a>
+      <a href="#gallery" class="block py-2 text-sm text-slate-200 hover:text-yellow-400">Car Wash &amp; Detail Gallery</a>
+      <a href="#reviews" class="block py-2 text-sm text-slate-200 hover:text-yellow-400">Google Reviews (4.7 Stars / 34 Reviews)</a>
+      <a href="#location" class="block py-2 text-sm text-slate-200 hover:text-yellow-400">Location &amp; The Orsini</a>
+      <div class="pt-3 flex flex-col gap-2">
+        <a href="tel:+13463773170" class="w-full text-center py-2.5 rounded-lg bg-slate-900 border border-yellow-500/50 text-yellow-400 text-sm font-bold flex items-center justify-center gap-2">
+          <i data-lucide="phone" class="w-4 h-4"></i> Call +1 346-377-3170
+        </a>
+        <button class="open-booking-modal-btn w-full py-3 rounded-lg shimmer-btn text-black text-sm font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+          <i data-lucide="calendar" class="w-4 h-4"></i> Request Mobile Wash Now
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=2000&q=85" 
+        alt="Professional Mobile Car Wash Foam Cannon Washing" 
+        class="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.15] scale-105"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#08090C] via-[#08090C]/65 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#08090C] via-transparent to-[#08090C]/80"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center lg:text-left">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Hero Left Column -->
+        <div class="lg:col-span-8 space-y-6">
+          
+          <!-- Rating & Status Badge -->
+          <div class="inline-flex flex-wrap items-center gap-2 sm:gap-3 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-yellow-500/40 backdrop-blur-md">
+            <div class="flex items-center text-yellow-400 text-xs">
+              <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+              <i data-lucide="star-half" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+              <span class="ml-1.5 font-bold text-white text-sm">4.7</span>
+            </div>
+            <span class="text-slate-400 text-xs">|</span>
+            <span class="text-xs text-slate-300 font-medium">34 Verified Google Reviews</span>
+            <span class="text-slate-400 text-xs">|</span>
+            <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 live-pulse inline-block"></span>
+              Open 24 Hours
+            </span>
+          </div>
+
+          <!-- Main Hero Headline -->
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
+            Los Angeles’ Premier <span class="text-gold-gradient">24/7 Mobile Car Wash</span> &amp; Detail
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="text-slate-300 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+            Professional mobile car washing and deep interior restoration for <strong>all makes and models</strong>. From daily commuters, family SUVs, and trucks to luxury sedans and exotics — our self-contained mobile vans bring spot-free deionized water, hospital-grade steam sanitization, and showroom shine directly to your doorstep.
+          </p>
+
+          <!-- CTAs -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <button class="open-booking-modal-btn w-full sm:w-auto px-8 py-4 rounded-xl shimmer-btn text-black font-bold uppercase tracking-wider text-sm shadow-xl flex items-center justify-center gap-2 hover:scale-105 transition-transform" data-service="Complete Signature Full Detail">
+              <i data-lucide="calendar" class="w-5 h-5"></i>
+              <span>Schedule Mobile Wash</span>
+            </button>
+            <a href="#3d-studio" class="w-full sm:w-auto px-7 py-4 rounded-xl bg-yellow-500/10 border border-yellow-500/50 hover:bg-yellow-500/20 text-yellow-400 font-bold text-sm flex items-center justify-center gap-2 transition-all backdrop-blur-md">
+              <i data-lucide="box" class="w-4 h-4"></i>
+              <span>Interactive 3D Studio</span>
+            </a>
+            <a href="tel:+13463773170" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-slate-900/90 border border-slate-700 hover:border-yellow-400 text-white font-semibold text-sm flex items-center justify-center gap-2.5 transition-colors backdrop-blur-md">
+              <i data-lucide="phone-call" class="w-4 h-4 text-yellow-400"></i>
+              <span>(346) 377-3170</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges List -->
+          <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-800/80">
+            <div class="flex items-center gap-2 text-xs text-slate-300">
+              <div class="w-6 h-6 rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 flex-shrink-0">
+                <i data-lucide="car" class="w-3.5 h-3.5"></i>
+              </div>
+              <span>All Makes &amp; Models</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-300">
+              <div class="w-6 h-6 rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 flex-shrink-0">
+                <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+              </div>
+              <span>100% Self-Contained Rig</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-300">
+              <div class="w-6 h-6 rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 flex-shrink-0">
+                <i data-lucide="droplet" class="w-3.5 h-3.5"></i>
+              </div>
+              <span>Spot-Free Filtered Water</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-300">
+              <div class="w-6 h-6 rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 flex-shrink-0">
+                <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+              </div>
+              <span>Open 24/7 Round-the-Clock</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Right Column: Fast Dispatch Card -->
+        <div class="lg:col-span-4 w-full">
+          <div class="glass-card rounded-2xl p-6 sm:p-7 shadow-2xl relative border-yellow-500/30">
+            <div class="absolute -top-3 right-6 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black text-[11px] font-extrabold uppercase px-3 py-1 rounded-full shadow-md tracking-wider">
+              DTLA Headquarters
+            </div>
+
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h2 class="text-sm font-bold text-white uppercase tracking-wider">Pure Intensions HQ</h2>
+                <p class="text-xs text-slate-400">The Orsini Apartments, DTLA</p>
+              </div>
+            </div>
+
+            <div class="space-y-3.5 text-xs text-slate-300">
+              <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-400 block text-[11px] uppercase tracking-wider">Full Address</span>
+                <span class="font-semibold text-slate-100">550 N Figueroa St, Los Angeles, CA 90012</span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2">
+                <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
+                  <span class="text-slate-400 block text-[11px] uppercase tracking-wider">Hours</span>
+                  <span class="font-bold text-emerald-400">Open 24 Hours</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
+                  <span class="text-slate-400 block text-[11px] uppercase tracking-wider">Plus Code</span>
+                  <span class="font-mono text-yellow-400">3Q63+MQ LA</span>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
+                <span class="text-slate-400 block text-[11px] uppercase tracking-wider">Direct Dispatch Line</span>
+                <a href="tel:+13463773170" class="text-sm font-bold text-yellow-400 hover:underline flex items-center gap-1.5 mt-0.5">
+                  <i data-lucide="phone" class="w-4 h-4"></i> +1 346-377-3170
+                </a>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800 flex flex-col gap-2">
+              <button class="open-booking-modal-btn w-full py-3 rounded-xl shimmer-btn text-black font-bold uppercase tracking-wider text-xs shadow-md flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i> Dispatch Mobile Team To Me
+              </button>
+              <a href="#location" class="w-full text-center py-2 text-xs text-slate-400 hover:text-yellow-400 transition-colors">
+                View Maps &amp; Coverage Radius &rarr;
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Ticker -->
+  <div class="bg-[#0e1017] border-y border-yellow-500/20 py-3 overflow-hidden whitespace-nowrap">
+    <div class="inline-block animate-[shimmer_20s_infinite_linear] font-serif text-xs uppercase tracking-widest text-yellow-400/90 font-medium space-x-8">
+      <span>✦ MOBILE CAR WASH FOR ALL MAKES &amp; MODELS</span>
+      <span>✦ 100% SELF-CONTAINED MOBILE RIGS (WATER &amp; POWER ONBOARD)</span>
+      <span>✦ SEDANS, SUVS, TRUCKS, EVS, LUXURY &amp; EXOTICS</span>
+      <span>✦ THE ORSINI APARTMENTS 550 N FIGUEROA ST, DTLA</span>
+      <span>✦ HOSPITAL-GRADE STEAM INTERIOR EXTRACTION</span>
+      <span>✦ 24/7 ON-CALL LOS ANGELES DISPATCH</span>
+      <span>✦ RATED 4.7 STARS ON GOOGLE (34 REVIEWS)</span>
+      <span>✦ FREE INSTANT CUSTOM QUOTES</span>
+    </div>
+  </div>
+
+  <!-- 3D Interactive Virtual Detailing Bay Section -->
+  <section id="3d-studio" class="py-20 bg-[#0B0D12] relative border-b border-slate-900 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold uppercase tracking-widest">
+          <i data-lucide="box" class="w-3.5 h-3.5"></i> 3D Virtual Detailing Bay
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+          Interactive 3D Detailing Simulator
+        </h2>
+        <p class="text-slate-400 text-sm max-w-2xl mx-auto">
+          Rotate in 360°, inspect real-time detailing treatments, trigger live snow foam washing, interior steam sanitization, and customize paint colors.
+        </p>
+      </div>
+
+      <!-- Main 3D Studio Card -->
+      <div class="glass-card rounded-3xl border border-yellow-500/40 shadow-2xl overflow-hidden relative">
+        
+        <!-- Top Studio Bar: Detailing Mode Selectors -->
+        <div class="p-4 sm:p-5 bg-slate-950/90 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3 z-30 relative">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 live-pulse"></span>
+            <span id="studio-status-badge" class="text-xs font-bold text-white uppercase tracking-wider">
+              3D Interactive Detailing Bay
+            </span>
+          </div>
+
+          <!-- Mode Buttons -->
+          <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
+            <button class="studio-mode-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-yellow-500 text-black transition-all flex items-center gap-1.5" data-mode="standard">
+              <i data-lucide="rotate-3d" class="w-3.5 h-3.5"></i> 360° Studio
+            </button>
+            <button class="studio-mode-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 hover:bg-slate-800 transition-all flex items-center gap-1.5" data-mode="wash">
+              <i data-lucide="droplet" class="w-3.5 h-3.5 text-yellow-400"></i> Foam &amp; Rinse
+            </button>
+            <button class="studio-mode-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 hover:bg-slate-800 transition-all flex items-center gap-1.5" data-mode="interior">
+              <i data-lucide="wind" class="w-3.5 h-3.5 text-yellow-400"></i> Interior Steam
+            </button>
+            <button class="studio-mode-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 hover:bg-slate-800 transition-all flex items-center gap-1.5" data-mode="ceramic">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-yellow-400"></i> Paint Polish
+            </button>
+            <button class="studio-mode-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 hover:bg-slate-800 transition-all flex items-center gap-1.5" data-mode="wheel">
+              <i data-lucide="disc" class="w-3.5 h-3.5 text-yellow-400"></i> Wheel Detail
+            </button>
+          </div>
+        </div>
+
+        <!-- 3D Canvas Container -->
+        <div id="three-car-container" class="three-canvas-container">
+          
+          <!-- Instructions Pill -->
+          <div class="absolute top-4 left-4 z-20 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-700 text-[11px] text-slate-300 flex items-center gap-2 pointer-events-none">
+            <i data-lucide="hand" class="w-3.5 h-3.5 text-yellow-400 animate-pulse"></i>
+            <span>Drag to rotate &bull; Scroll to zoom</span>
+          </div>
+
+          <!-- Color Customizer Palette Overlay -->
+          <div class="absolute top-4 right-4 z-20 bg-slate-900/85 backdrop-blur-md p-2 rounded-2xl border border-slate-700/80 flex flex-col items-center gap-2 shadow-xl">
+            <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Paint</span>
+            <button class="color-swatch-btn w-6 h-6 rounded-full bg-[#111318] ring-2 ring-yellow-400 scale-110 shadow" data-color="111318" title="Obsidian Black"></button>
+            <button class="color-swatch-btn w-6 h-6 rounded-full bg-[#eef0f4] shadow" data-color="eef0f4" title="Pearl White"></button>
+            <button class="color-swatch-btn w-6 h-6 rounded-full bg-[#c5a458] shadow" data-color="c5a458" title="Champagne Gold"></button>
+            <button class="color-swatch-btn w-6 h-6 rounded-full bg-[#5c626b] shadow" data-color="5c626b" title="Nardo Gray"></button>
+            <button class="color-swatch-btn w-6 h-6 rounded-full bg-[#10223e] shadow" data-color="10223e" title="Midnight Blue"></button>
+            <button class="color-swatch-btn w-6 h-6 rounded-full bg-[#881414] shadow" data-color="881414" title="Rosso Red"></button>
+          </div>
+
+          <!-- 3D Interactive Hotspot 1: Hood (Exterior Wash) -->
+          <div id="hotspot-hood" class="hotspot-pin">
+            <div class="hotspot-dot">
+              <span class="hotspot-pulse-ring"></span>
+              1
+            </div>
+            <div class="hotspot-card">
+              <span class="text-[10px] font-bold uppercase text-yellow-400 block">Exterior Treatment</span>
+              <h5 class="text-xs font-bold text-white mt-0.5">Deionized Snow Foam Wash</h5>
+              <p class="text-[11px] text-slate-300 mt-1">Spot-free 0-TDS water &amp; pH neutral foam bath.</p>
+              <button class="open-booking-modal-btn mt-2 w-full py-1 text-[10px] rounded bg-yellow-500 text-black font-bold uppercase tracking-wider" data-service="Pure Mobile Foam Hand Wash &amp; Wax">
+                Book This
+              </button>
+            </div>
+          </div>
+
+          <!-- 3D Interactive Hotspot 2: Cabin (Interior Steam) -->
+          <div id="hotspot-interior" class="hotspot-pin">
+            <div class="hotspot-dot">
+              <span class="hotspot-pulse-ring"></span>
+              2
+            </div>
+            <div class="hotspot-card">
+              <span class="text-[10px] font-bold uppercase text-yellow-400 block">Interior Treatment</span>
+              <h5 class="text-xs font-bold text-white mt-0.5">280°F Dry Steam Sanitization</h5>
+              <p class="text-[11px] text-slate-300 mt-1">Deep pore leather scrub, AC duct disinfection &amp; carpet extraction.</p>
+              <button class="open-booking-modal-btn mt-2 w-full py-1 text-[10px] rounded bg-yellow-500 text-black font-bold uppercase tracking-wider" data-service="Deep Interior Steam &amp; Shampoo">
+                Book This
+              </button>
+            </div>
+          </div>
+
+          <!-- 3D Interactive Hotspot 3: Wheel (Ceramic Wheel) -->
+          <div id="hotspot-wheel" class="hotspot-pin">
+            <div class="hotspot-dot">
+              <span class="hotspot-pulse-ring"></span>
+              3
+            </div>
+            <div class="hotspot-card">
+              <span class="text-[10px] font-bold uppercase text-yellow-400 block">Wheel &amp; Caliper</span>
+              <h5 class="text-xs font-bold text-white mt-0.5">Wheel De-Ironing &amp; Dressing</h5>
+              <p class="text-[11px] text-slate-300 mt-1">Brake dust dissolution, caliper detail &amp; satin tire shine.</p>
+              <button class="open-booking-modal-btn mt-2 w-full py-1 text-[10px] rounded bg-yellow-500 text-black font-bold uppercase tracking-wider" data-service="Complete Signature Full Detail">
+                Book This
+              </button>
+            </div>
+          </div>
+
+          <!-- 3D Interactive Hotspot 4: Roof / Body (Paint Correction) -->
+          <div id="hotspot-roof" class="hotspot-pin">
+            <div class="hotspot-dot">
+              <span class="hotspot-pulse-ring"></span>
+              4
+            </div>
+            <div class="hotspot-card">
+              <span class="text-[10px] font-bold uppercase text-yellow-400 block">Paintwork Armor</span>
+              <h5 class="text-xs font-bold text-white mt-0.5">Swirl Correction &amp; Ceramic</h5>
+              <p class="text-[11px] text-slate-300 mt-1">Multi-stage rotary polish eliminating scratches for wet mirror reflection.</p>
+              <button class="open-booking-modal-btn mt-2 w-full py-1 text-[10px] rounded bg-yellow-500 text-black font-bold uppercase tracking-wider" data-service="Paint Correction &amp; Machine Polish">
+                Book This
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Studio Control Bar -->
+        <div class="p-4 bg-slate-950/95 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3 text-xs text-slate-300 text-center sm:text-left">
+            <div class="w-8 h-8 rounded-lg bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 flex-shrink-0">
+              <i data-lucide="info" class="w-4 h-4"></i>
+            </div>
+            <p id="studio-mode-description" class="text-xs text-slate-300">
+              Drag to rotate 360° &bull; Pinch or scroll to zoom &bull; Click hotspots to inspect detailing treatments.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+            <button id="studio-reset-cam-btn" class="px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white text-xs font-semibold flex items-center gap-1.5 transition-colors">
+              <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Reset Angle
+            </button>
+            <button class="open-booking-modal-btn px-5 py-2 rounded-xl shimmer-btn text-black font-extrabold uppercase text-xs tracking-wider shadow-lg flex items-center gap-1.5" data-service="Complete Signature Full Detail">
+              <i data-lucide="calendar" class="w-3.5 h-3.5"></i> Book Mobile Wash
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- All Vehicles Serviced Section -->
+  <section id="vehicles" class="py-24 bg-[#08090C] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold uppercase tracking-widest">
+          <i data-lucide="car" class="w-3.5 h-3.5"></i> Comprehensive Coverage
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+          Mobile Car Wash &amp; Detailing For Every Vehicle
+        </h2>
+        <p class="text-slate-400 text-base leading-relaxed">
+          Whether you need a quick hand wash for your daily driver, a deep interior shampoo for your family SUV, or white-glove preservation for luxury sedans and exotics — <strong class="text-yellow-400">Pure Intensions</strong> has the specialized tools, deionized water, and experience for every ride.
+        </p>
+      </div>
+
+      <!-- Feature Grid: 4 Vehicle Categories -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        
+        <!-- Category 1: Sedans, Coupes & Daily Commuters -->
+        <div class="glass-card rounded-2xl p-6 gold-glow-hover space-y-4 border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400">
+            <i data-lucide="car" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-white">Sedans, Coupes &amp; Commuters</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Fast, thorough exterior foam wash and interior refreshment for daily drivers. Eradicate city smog, dust, and coffee spills right in your driveway or parking spot.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1.5 pt-2 border-t border-slate-800">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-yellow-400"></i> Honda, Toyota, BMW, Audi, etc.</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-yellow-400"></i> Express &amp; full detail options</li>
+          </ul>
+        </div>
+
+        <!-- Category 2: SUVs, Crossovers & Minivans -->
+        <div class="glass-card rounded-2xl p-6 gold-glow-hover space-y-4 border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400">
+            <i data-lucide="shield" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-white">SUVs, Crossovers &amp; Vans</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Deep interior vacuuming, carpet stain extraction, pet hair removal, and kid-spill sanitization. We make busy family vehicles feel like new again.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1.5 pt-2 border-t border-slate-800">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-yellow-400"></i> 2-row &amp; 3-row vehicles</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-yellow-400"></i> Deep steam sanitization</li>
+          </ul>
+        </div>
+
+        <!-- Category 3: Trucks & Work Vehicles -->
+        <div class="glass-card rounded-2xl p-6 gold-glow-hover space-y-4 border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400">
+            <i data-lucide="truck" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-white">Trucks &amp; Work Vehicles</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Heavy-duty foam decontamination for mud, road grime, wheel wells, and truck beds. Plus thorough interior cabin detailing for work and recreation.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1.5 pt-2 border-t border-slate-800">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-yellow-400"></i> F-150, Silverado, Ram, Tacoma</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-yellow-400"></i> Undercarriage &amp; wheel arch clean</li>
+          </ul>
+        </div>
+
+        <!-- Category 4: Electric Vehicles, Luxury & Exotics -->
+        <div class="glass-card rounded-2xl p-6 gold-glow-hover space-y-4 border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400">
+            <i data-lucide="sparkle" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-white">EVs, Luxury &amp; Exotics</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Specialized care for delicate touchscreens, vegan &amp; premium leather, ceramic clear coats, and prestigious marques including Tesla, Porsche, Mercedes, and Rolls-Royce.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1.5 pt-2 border-t border-slate-800">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-yellow-400"></i> Touchless heated air drying</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-yellow-400"></i> Swirl-free guarantee</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Real Imagery Showcase Banner -->
+      <div class="rounded-3xl overflow-hidden border border-yellow-500/30 relative bg-[#101217]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+          <div class="lg:col-span-7 p-8 sm:p-12 space-y-6">
+            <div class="inline-block text-xs font-bold uppercase tracking-wider text-yellow-400 bg-yellow-500/10 px-3 py-1 rounded">
+              Downtown Los Angeles On-Site Service
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+              Mobile Car Wash at The Orsini Apartments &amp; Greater LA
+            </h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Based out of 550 N Figueroa St inside The Orsini Apartments, our mobile detailing vans are equipped to operate inside underground parking structures, apartment carports, office buildings, and residential driveways. 100% self-contained with reverse osmosis water and quiet generators.
+            </p>
+            <div class="flex flex-wrap gap-3 text-xs font-semibold text-slate-200">
+              <span class="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i> 100% Self-Contained Van
+              </span>
+              <span class="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i> No Water Runoff / Garage Safe
+              </span>
+              <span class="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i> Available 24 Hours / 7 Days
+              </span>
+            </div>
+            <div class="pt-2">
+              <button class="open-booking-modal-btn px-6 py-3 rounded-xl shimmer-btn text-black font-bold uppercase text-xs tracking-wider shadow-lg flex items-center gap-2" data-service="Complete Signature Full Detail">
+                <i data-lucide="calendar" class="w-4 h-4"></i> Request Mobile Detail
+              </button>
+            </div>
+          </div>
+          <div class="lg:col-span-5 relative h-72 sm:h-96 lg:h-full min-h-[350px]">
+            <img 
+              src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1200&q=80" 
+              alt="Professional Mobile Car Detailing Hand Wash in Action" 
+              class="w-full h-full object-cover object-center"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#101217] via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#101217] lg:via-transparent lg:to-transparent"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Before & After Transformation Slider Section -->
+  <section id="before-after" class="py-24 bg-[#0B0D12] relative border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold uppercase tracking-widest">
+          <i data-lucide="sliders" class="w-3.5 h-3.5"></i> Proof of Quality
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+          Real Before &amp; After Transformations
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Drag the center gold slider left and right to inspect the dramatic difference between daily wear and our deep restorative detailing.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        
+        <!-- Slider 1: Interior Deep Clean & Leather Restoration -->
+        <div class="glass-card rounded-2xl p-5 space-y-4 border-slate-800">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="font-serif text-lg font-bold text-white">Deep Interior Steam &amp; Leather Refresh</h3>
+              <p class="text-xs text-slate-400">Pore Scrub, Stain Removal &amp; Sanitization</p>
+            </div>
+            <span class="text-xs bg-yellow-500/20 text-yellow-400 px-2.5 py-1 rounded-full font-bold">Interactive</span>
+          </div>
+
+          <!-- Slider Container -->
+          <div class="before-after-container aspect-[16/10] border border-slate-800 shadow-2xl">
+            <!-- AFTER Image (Background) -->
+            <img 
+              src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1200&q=80" 
+              alt="After Detailing - Deep Clean Interior Cockpit" 
+              class="before-after-image"
+            />
+            <div class="absolute bottom-3 right-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-bold text-emerald-400 border border-emerald-500/30 pointer-events-none z-10">
+              AFTER: Deep Steam Cleaned &amp; Fresh
+            </div>
+
+            <!-- BEFORE Image (Overlay) -->
+            <div class="before-after-overlay">
+              <img 
+                src="https://images.unsplash.com/photo-1541348263662-e0c8de4259ba?auto=format&fit=crop&w=1200&q=80" 
+                alt="Before Detailing - Dusty Dirty Interior" 
+                class="filter contrast-90 brightness-90 saturate-50"
+              />
+              <div class="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-bold text-amber-400 border border-amber-500/30 pointer-events-none z-10">
+                BEFORE: Dust, Dirt &amp; Spills
+              </div>
+            </div>
+
+            <!-- Draggable Divider Handle -->
+            <div class="before-after-handle">
+              <div class="before-after-handle-button">
+                <i data-lucide="chevrons-left-right" class="w-5 h-5"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-xs text-slate-400 flex items-center justify-between pt-1">
+            <span>◄ Drag Left for After</span>
+            <span>Drag Right for Before ►</span>
+          </div>
+        </div>
+
+        <!-- Slider 2: Exterior Hand Wash & Paint Gloss -->
+        <div class="glass-card rounded-2xl p-5 space-y-4 border-slate-800">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="font-serif text-lg font-bold text-white">Exterior Swirl Removal &amp; Gloss Finish</h3>
+              <p class="text-xs text-slate-400">Microfiber Hand Wash &amp; Machine Polish</p>
+            </div>
+            <span class="text-xs bg-yellow-500/20 text-yellow-400 px-2.5 py-1 rounded-full font-bold">Interactive</span>
+          </div>
+
+          <!-- Slider Container -->
+          <div class="before-after-container aspect-[16/10] border border-slate-800 shadow-2xl">
+            <!-- AFTER Image (Background) -->
+            <img 
+              src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1200&q=80" 
+              alt="After Paint Correction - Mirror Gloss Polish" 
+              class="before-after-image"
+            />
+            <div class="absolute bottom-3 right-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-bold text-emerald-400 border border-emerald-500/30 pointer-events-none z-10">
+              AFTER: Brilliant Mirror Gloss
+            </div>
+
+            <!-- BEFORE Image (Overlay) -->
+            <div class="before-after-overlay">
+              <img 
+                src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=1200&q=80" 
+                alt="Before Paint Correction - Swirls and Haze" 
+                class="filter contrast-125 sepia-[0.3]"
+              />
+              <div class="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-bold text-amber-400 border border-amber-500/30 pointer-events-none z-10">
+                BEFORE: Swirls &amp; Oxidation
+              </div>
+            </div>
+
+            <!-- Draggable Divider Handle -->
+            <div class="before-after-handle">
+              <div class="before-after-handle-button">
+                <i data-lucide="chevrons-left-right" class="w-5 h-5"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-xs text-slate-400 flex items-center justify-between pt-1">
+            <span>◄ Drag Left for After</span>
+            <span>Drag Right for Before ►</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Complete Services & Packages Section (NO PRICES) -->
+  <section id="services" class="py-24 bg-[#08090C] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold uppercase tracking-widest">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i> Service Menu
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+          Mobile Car Wash &amp; Detailing Services
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          All-inclusive mobile packages tailored to your vehicle's make, size, and current condition. Delivered directly to your location anywhere in Los Angeles. Open 24/7.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Package 1: Complete Signature Full Detail (FEATURED) -->
+        <div class="glass-card rounded-2xl p-7 relative border-yellow-500/60 shadow-2xl flex flex-col justify-between gold-glow lg:scale-105 z-10 bg-[#141722]">
+          <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black text-xs font-black uppercase px-4 py-1 rounded-full shadow-lg tracking-wider">
+            ★ Most Popular Choice ★
+          </div>
+
+          <div class="space-y-5">
+            <div class="flex items-center justify-between pt-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-yellow-400">Total Vehicle Care</span>
+              <span class="text-xs text-slate-400">⏱ 2.5 - 3.5 Hours</span>
+            </div>
+
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-white">Complete Signature Full Detail</h3>
+              <p class="text-xs text-slate-400 mt-1">Our comprehensive interior &amp; exterior mobile rejuvenation.</p>
+            </div>
+
+            <div class="inline-block bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold px-3 py-1.5 rounded-lg">
+              Free Custom Quote &bull; Tailored to Vehicle Size
+            </div>
+
+            <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-slate-800">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Deionized Snow Foam Pre-Soak</strong> &amp; gentle two-bucket scratch-free hand wash.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Deep Interior Steam Sanitization</strong> of AC vents, consoles, cup holders, and seams.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Carpet &amp; Upholstery Shampoo</strong> lifting everyday stains, spills, and dirt.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Leather Cleanse &amp; Condition</strong> or fabric protection barrier.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Wheel Faces, Barrels &amp; Tires Dressed</strong> with long-lasting satin finish.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Hydrophobic Spray Sealant</strong> applied to paint for gloss &amp; UV protection.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <button class="open-booking-modal-btn w-full py-3.5 rounded-xl shimmer-btn text-black font-extrabold uppercase tracking-wider text-xs shadow-lg flex items-center justify-center gap-2 hover:brightness-110" data-service="Complete Signature Full Detail">
+              <i data-lucide="calendar" class="w-4 h-4"></i> Book Full Detail
+            </button>
+          </div>
+        </div>
+
+        <!-- Package 2: Presidential Deep Interior Steam & Shampoo -->
+        <div class="glass-card rounded-2xl p-7 relative border-slate-800 flex flex-col justify-between">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Interior Restoration</span>
+              <span class="text-xs text-slate-400">⏱ 2 - 3 Hours</span>
+            </div>
+
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-white">Deep Interior Steam &amp; Shampoo</h3>
+              <p class="text-xs text-slate-400 mt-1">High-temp steam sanitization, stain removal &amp; odor eradication.</p>
+            </div>
+
+            <div class="inline-block bg-slate-900 border border-slate-700 text-slate-300 text-xs font-bold px-3 py-1.5 rounded-lg">
+              Free Custom Quote &bull; Tailored to Condition
+            </div>
+
+            <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-slate-800">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>280°F Dry Steam Disinfection</strong> eliminating 99.9% of bacteria and allergens.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Hot Water Carpet &amp; Mat Extraction</strong> removing tough beverage stains and grime.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Leather Seat Deep-Pore Scrub</strong> and non-greasy UV nourishing balm.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Dashboard, Console &amp; Door Panel Detailing</strong> with streak-free glass.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Ozone Odor Neutralization</strong> eliminating food, smoke, and pet smells.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <button class="open-booking-modal-btn w-full py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold uppercase tracking-wider text-xs shadow-md flex items-center justify-center gap-2 transition-colors" data-service="Deep Interior Steam &amp; Shampoo">
+              <i data-lucide="calendar" class="w-4 h-4 text-yellow-400"></i> Book Interior Detail
+            </button>
+          </div>
+        </div>
+
+        <!-- Package 3: Pure Mobile Foam Hand Wash & Wax -->
+        <div class="glass-card rounded-2xl p-7 relative border-slate-800 flex flex-col justify-between">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Regular Upkeep</span>
+              <span class="text-xs text-slate-400">⏱ 1 - 1.5 Hours</span>
+            </div>
+
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-white">Pure Mobile Foam Wash &amp; Wax</h3>
+              <p class="text-xs text-slate-400 mt-1">Gentle hand washing for sedans, SUVs, trucks, and all vehicles.</p>
+            </div>
+
+            <div class="inline-block bg-slate-900 border border-slate-700 text-slate-300 text-xs font-bold px-3 py-1.5 rounded-lg">
+              Free Custom Quote &bull; Fast Doorstep Service
+            </div>
+
+            <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-slate-800">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Deionized 0-TDS Spot-Free Rinse</strong> (no calcium water spots).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Plush Microfiber Hand Wash</strong> with pH-neutral slick lubricating soap.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Wheel Faces &amp; Tire Scrub</strong> followed by non-sling tire dressing.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Interior Vacuum &amp; Light Wipe-Down</strong> of consoles, mats, and dash.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Carnauba Spray Wax</strong> for shine and quick paint defense.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <button class="open-booking-modal-btn w-full py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold uppercase tracking-wider text-xs shadow-md flex items-center justify-center gap-2 transition-colors" data-service="Pure Mobile Foam Wash &amp; Wax">
+              <i data-lucide="calendar" class="w-4 h-4 text-yellow-400"></i> Book Hand Wash
+            </button>
+          </div>
+        </div>
+
+        <!-- Package 4: Multi-Stage Swirl Paint Correction -->
+        <div class="glass-card rounded-2xl p-7 relative border-slate-800 flex flex-col justify-between">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Paint Enhancement</span>
+              <span class="text-xs text-slate-400">⏱ 4 - 6 Hours</span>
+            </div>
+
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-white">Paint Correction &amp; Machine Polish</h3>
+              <p class="text-xs text-slate-400 mt-1">Eradicate swirl marks, spiderwebs, and dull paint haze.</p>
+            </div>
+
+            <div class="inline-block bg-slate-900 border border-slate-700 text-slate-300 text-xs font-bold px-3 py-1.5 rounded-lg">
+              Free Custom Inspection &amp; Quote
+            </div>
+
+            <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-slate-800">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Chemical Iron Fallout &amp; Clay Bar Treatment</strong> to prep smooth glass surface.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Machine Compound Polishing</strong> targeting clearcoat scratches and swirls.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Finishing Jeweling Polish</strong> that maximizes color depth and clarity.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Paint Gauge Verification</strong> ensuring safe clear coat thickness throughout.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <button class="open-booking-modal-btn w-full py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold uppercase tracking-wider text-xs shadow-md flex items-center justify-center gap-2 transition-colors" data-service="Paint Correction &amp; Machine Polish">
+              <i data-lucide="calendar" class="w-4 h-4 text-yellow-400"></i> Request Paint Polish
+            </button>
+          </div>
+        </div>
+
+        <!-- Package 5: 9H Ceramic & Graphene Coating -->
+        <div class="glass-card rounded-2xl p-7 relative border-slate-800 flex flex-col justify-between">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Long-Term Shield</span>
+              <span class="text-xs text-slate-400">⏱ Multi-Year Protection</span>
+            </div>
+
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-white">9H Ceramic &amp; Graphene Armor</h3>
+              <p class="text-xs text-slate-400 mt-1">Multi-year hydrophobic armor against bird droppings, UV and road grime.</p>
+            </div>
+
+            <div class="inline-block bg-slate-900 border border-slate-700 text-slate-300 text-xs font-bold px-3 py-1.5 rounded-lg">
+              Free Consultation &amp; Quote
+            </div>
+
+            <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-slate-800">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Permanent Nano-Ceramic Barrier</strong> options from 2 to 5+ years.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Self-Cleaning Hydrophobic Effect</strong> (dirt and water simply bead and roll off).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Windshield, Wheel Face &amp; Exterior Trim</strong> coating included.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Protects Resale Value</strong> and minimizes routine washing effort.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <button class="open-booking-modal-btn w-full py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold uppercase tracking-wider text-xs shadow-md flex items-center justify-center gap-2 transition-colors" data-service="9H Ceramic &amp; Graphene Coating">
+              <i data-lucide="calendar" class="w-4 h-4 text-yellow-400"></i> Inquire Ceramic Armor
+            </button>
+          </div>
+        </div>
+
+        <!-- Package 6: Residential, Garage & Fleet Concierge Wash -->
+        <div class="glass-card rounded-2xl p-7 relative border-slate-800 flex flex-col justify-between">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Garage &amp; Apartment Safe</span>
+              <span class="text-xs text-slate-400">⏱ On-Site Convenient</span>
+            </div>
+
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-white">The Orsini &amp; High-Rise Concierge</h3>
+              <p class="text-xs text-slate-400 mt-1">Zero-runoff waterless / eco-steam for underground garages &amp; apartments.</p>
+            </div>
+
+            <div class="inline-block bg-slate-900 border border-slate-700 text-slate-300 text-xs font-bold px-3 py-1.5 rounded-lg">
+              Free Custom Quote &bull; Group / Fleet Available
+            </div>
+
+            <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-slate-800">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>100% Garage &amp; HOA Compliant</strong> with zero puddle runoff or water mess.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Direct On-Site at The Orsini (550 N Figueroa)</strong> &amp; DTLA residential complexes.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Key Drop &amp; Lock Service</strong> while you work, sleep, or relax at home.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+                <span><strong>Multi-Car &amp; Recurring Maintenance Plans</strong> for individuals and families.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <button class="open-booking-modal-btn w-full py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold uppercase tracking-wider text-xs shadow-md flex items-center justify-center gap-2 transition-colors" data-service="The Orsini &amp; High-Rise Concierge">
+              <i data-lucide="calendar" class="w-4 h-4 text-yellow-400"></i> Book Garage Concierge
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Package & Custom Quote Builder (NO PRICES) -->
+  <section id="calculator" class="py-24 bg-[#0B0D12] relative border-y border-slate-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold uppercase tracking-widest">
+          <i data-lucide="calculator" class="w-3.5 h-3.5"></i> Custom Quote Builder
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+          Build Your Custom Detailing Package
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm">
+          Select your vehicle size and desired services. Receive a free, no-obligation quote and instant mobile dispatch.
+        </p>
+      </div>
+
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border-yellow-500/30 shadow-2xl space-y-8">
+        
+        <!-- Step 1: Vehicle Type -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-yellow-400 mb-3">
+            Step 1: Select Your Vehicle Type
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <button type="button" class="calc-vehicle-btn p-4 rounded-xl border border-yellow-500 bg-yellow-500/10 text-yellow-400 text-left transition-all flex items-center justify-between" data-vehicle="Sedan / Coupe / Daily Driver">
+              <div>
+                <span class="block font-bold text-sm text-white">Sedan / Coupe</span>
+                <span class="text-[11px] text-slate-400">Civic, Accord, Camry, Model 3, 3-Series</span>
+              </div>
+              <i data-lucide="car" class="w-5 h-5 flex-shrink-0"></i>
+            </button>
+            <button type="button" class="calc-vehicle-btn p-4 rounded-xl border border-slate-800 bg-slate-900/60 text-slate-400 text-left transition-all flex items-center justify-between" data-vehicle="Mid-Size SUV / Crossover">
+              <div>
+                <span class="block font-bold text-sm text-white">SUV / Crossover</span>
+                <span class="text-[11px] text-slate-400">RAV4, CR-V, Model Y, X3, Q5</span>
+              </div>
+              <i data-lucide="shield" class="w-5 h-5 flex-shrink-0"></i>
+            </button>
+            <button type="button" class="calc-vehicle-btn p-4 rounded-xl border border-slate-800 bg-slate-900/60 text-slate-400 text-left transition-all flex items-center justify-between" data-vehicle="Full-Size SUV / Truck / Van">
+              <div>
+                <span class="block font-bold text-sm text-white">Large SUV / Truck</span>
+                <span class="text-[11px] text-slate-400">Suburban, F-150, Escalade, Tahoe, Van</span>
+              </div>
+              <i data-lucide="truck" class="w-5 h-5 flex-shrink-0"></i>
+            </button>
+            <button type="button" class="calc-vehicle-btn p-4 rounded-xl border border-slate-800 bg-slate-900/60 text-slate-400 text-left transition-all flex items-center justify-between" data-vehicle="Luxury / Sports / Exotic">
+              <div>
+                <span class="block font-bold text-sm text-white">Luxury &amp; Exotic</span>
+                <span class="text-[11px] text-slate-400">Porsche, Mercedes, Corvette, Rolls, etc.</span>
+              </div>
+              <i data-lucide="crown" class="w-5 h-5 flex-shrink-0"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Detailing Package -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-yellow-400 mb-3">
+            Step 2: Choose Service Focus
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div class="calc-pkg-card p-4 rounded-xl border border-yellow-500 bg-yellow-500/10 cursor-pointer transition-all" data-name="Complete Signature Full Detail" data-time="2.5 - 3.5 hrs">
+              <span class="text-xs font-bold text-white block">Complete Full Detail</span>
+              <span class="text-xs text-yellow-400 font-semibold mt-1 block">Interior + Exterior</span>
+              <span class="text-[10px] text-slate-400 block mt-1">Deep steam extraction &amp; foam hand wash</span>
+            </div>
+            <div class="calc-pkg-card p-4 rounded-xl border border-slate-800 bg-slate-900/50 cursor-pointer transition-all hover:border-slate-700" data-name="Deep Interior Steam &amp; Shampoo" data-time="2 - 3 hrs">
+              <span class="text-xs font-bold text-white block">Interior Deep Clean</span>
+              <span class="text-xs text-yellow-400 font-semibold mt-1 block">Cabin Sanitization</span>
+              <span class="text-[10px] text-slate-400 block mt-1">Stain extraction, steam &amp; leather scrub</span>
+            </div>
+            <div class="calc-pkg-card p-4 rounded-xl border border-slate-800 bg-slate-900/50 cursor-pointer transition-all hover:border-slate-700" data-name="Pure Mobile Foam Hand Wash &amp; Wax" data-time="1 - 1.5 hrs">
+              <span class="text-xs font-bold text-white block">Signature Hand Wash</span>
+              <span class="text-xs text-yellow-400 font-semibold mt-1 block">Doorstep Upkeep</span>
+              <span class="text-[10px] text-slate-400 block mt-1">Spot-free foam wash + quick interior vacuum</span>
+            </div>
+            <div class="calc-pkg-card p-4 rounded-xl border border-slate-800 bg-slate-900/50 cursor-pointer transition-all hover:border-slate-700" data-name="Paint Correction &amp; Swirl Polish" data-time="4 - 6 hrs">
+              <span class="text-xs font-bold text-white block">Paint Swirl Correction</span>
+              <span class="text-xs text-yellow-400 font-semibold mt-1 block">Gloss Polish</span>
+              <span class="text-[10px] text-slate-400 block mt-1">Machine compounding restoring wet reflection</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Bespoke Add-ons (NO PRICES) -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-yellow-400 mb-3">
+            Step 3: Select Optional Add-ons
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 cursor-pointer text-xs">
+              <input type="checkbox" class="calc-addon-check w-4 h-4 rounded text-yellow-500 accent-yellow-500" data-name="Engine Bay Steam Clean">
+              <div>
+                <span class="text-white font-medium block">Engine Bay Steam Clean</span>
+                <span class="text-yellow-400 text-[11px]">Degrease &amp; plastic dress</span>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 cursor-pointer text-xs">
+              <input type="checkbox" class="calc-addon-check w-4 h-4 rounded text-yellow-500 accent-yellow-500" data-name="Pet Hair Removal &amp; Extraction">
+              <div>
+                <span class="text-white font-medium block">Pet Hair Removal</span>
+                <span class="text-yellow-400 text-[11px]">Deep carpet brush extraction</span>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 cursor-pointer text-xs">
+              <input type="checkbox" class="calc-addon-check w-4 h-4 rounded text-yellow-500 accent-yellow-500" data-name="Leather Ceramic Nourishment">
+              <div>
+                <span class="text-white font-medium block">Leather Deep Conditioning</span>
+                <span class="text-yellow-400 text-[11px]">UV hydration &amp; protection</span>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 cursor-pointer text-xs">
+              <input type="checkbox" class="calc-addon-check w-4 h-4 rounded text-yellow-500 accent-yellow-500" data-name="Headlight Restoration">
+              <div>
+                <span class="text-white font-medium block">Headlight De-Oxidation</span>
+                <span class="text-yellow-400 text-[11px]">Clear lens restoration</span>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 cursor-pointer text-xs">
+              <input type="checkbox" class="calc-addon-check w-4 h-4 rounded text-yellow-500 accent-yellow-500" data-name="Ozone Odor Sterilization">
+              <div>
+                <span class="text-white font-medium block">Ozone Odor Eliminator</span>
+                <span class="text-yellow-400 text-[11px]">Bacterial &amp; smoke eradication</span>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 cursor-pointer text-xs">
+              <input type="checkbox" class="calc-addon-check w-4 h-4 rounded text-yellow-500 accent-yellow-500" data-name="Ceramic Wheel Face Seal">
+              <div>
+                <span class="text-white font-medium block">Wheel &amp; Caliper Sealant</span>
+                <span class="text-yellow-400 text-[11px]">Brake dust repellent</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Real-Time Package Summary Card -->
+        <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6 bg-slate-950/70 p-6 rounded-2xl">
+          <div class="space-y-1.5 text-center md:text-left">
+            <span class="text-xs uppercase tracking-wider text-yellow-400 font-bold">Selected Configuration</span>
+            <div class="text-lg font-bold text-white">
+              <span id="calc-selected-pkg-name">Complete Signature Full Detail</span>
+            </div>
+            <div class="text-xs text-slate-300">
+              Vehicle: <strong id="calc-selected-vehicle" class="text-yellow-400">Sedan / Coupe / Daily Driver</strong> &bull; Est. Duration: <strong id="calc-est-time" class="text-white">2.5 - 3.5 hrs</strong>
+            </div>
+            <p id="calc-addons-count" class="text-xs text-slate-400">None selected</p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+            <button id="calc-book-cta" class="w-full sm:w-auto px-8 py-4 rounded-xl shimmer-btn text-black font-extrabold uppercase tracking-wider text-xs shadow-xl flex items-center justify-center gap-2 hover:scale-105 transition-all">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Get Free Quote &amp; Book</span>
+            </button>
+            <a href="tel:+13463773170" class="w-full sm:w-auto px-5 py-4 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white text-xs font-bold text-center flex items-center justify-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-yellow-400"></i> Call Dispatch
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Real Images Showcase & Gallery -->
+  <section id="gallery" class="py-24 bg-[#08090C] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold uppercase tracking-widest mb-3">
+            <i data-lucide="image" class="w-3.5 h-3.5"></i> Real Photography
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            Pure Intensions Detailing Gallery
+          </h2>
+          <p class="text-slate-400 text-sm mt-2 max-w-xl">
+            Real photos of our mobile car washing, deep interior shampooing, and paint polishing for all kinds of vehicles across Los Angeles.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-2">
+          <button class="gallery-filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-yellow-500 text-black transition-all" data-filter="all">All Vehicles</button>
+          <button class="gallery-filter-btn px-4 py-2 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 hover:bg-slate-800 transition-all" data-filter="wash">Foam Wash &amp; Exterior</button>
+          <button class="gallery-filter-btn px-4 py-2 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 hover:bg-slate-800 transition-all" data-filter="interior">Interior Washing</button>
+          <button class="gallery-filter-btn px-4 py-2 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 hover:bg-slate-800 transition-all" data-filter="suv">SUVs &amp; Sedans</button>
+          <button class="gallery-filter-btn px-4 py-2 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 hover:bg-slate-800 transition-all" data-filter="luxury">Luxury &amp; Exotics</button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-container">
+        
+        <!-- Image 1: Snow Foam Cannon Wash -->
+        <div class="gallery-item gallery-card rounded-2xl aspect-[4/3] bg-slate-900 border border-slate-800" data-category="wash suv">
+          <img 
+            src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1200&q=80" 
+            alt="Dense Snow Foam Wash in Action" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="gallery-overlay absolute inset-0 p-6 flex flex-col justify-end text-white">
+            <span class="text-[11px] font-bold text-yellow-400 uppercase tracking-wider">Mobile Foam Wash</span>
+            <h4 class="gallery-card-title font-serif text-lg font-bold">pH-Neutral Snow Foam Bath</h4>
+            <p class="gallery-card-desc text-xs text-slate-300 mt-1">Lifting road grit safely before hand washing.</p>
+          </div>
+        </div>
+
+        <!-- Image 2: Interior Leather & Cockpit Deep Clean -->
+        <div class="gallery-item gallery-card rounded-2xl aspect-[4/3] bg-slate-900 border border-slate-800" data-category="interior suv luxury">
+          <img 
+            src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1200&q=80" 
+            alt="Deep Clean Interior Leather Cockpit" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="gallery-overlay absolute inset-0 p-6 flex flex-col justify-end text-white">
+            <span class="text-[11px] font-bold text-yellow-400 uppercase tracking-wider">Interior Washing</span>
+            <h4 class="gallery-card-title font-serif text-lg font-bold">Steam Sanitized Leather Cockpit</h4>
+            <p class="gallery-card-desc text-xs text-slate-300 mt-1">Deep pore cleaning and matte finish conditioning.</p>
+          </div>
+        </div>
+
+        <!-- Image 3: Hand Wash Microfiber Mitt -->
+        <div class="gallery-item gallery-card rounded-2xl aspect-[4/3] bg-slate-900 border border-slate-800" data-category="wash suv">
+          <img 
+            src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1200&q=80" 
+            alt="Hand Wash Detailing with Microfiber" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="gallery-overlay absolute inset-0 p-6 flex flex-col justify-end text-white">
+            <span class="text-[11px] font-bold text-yellow-400 uppercase tracking-wider">Gentle Hand Wash</span>
+            <h4 class="gallery-card-title font-serif text-lg font-bold">Scratch-Free Two-Bucket Cleansing</h4>
+            <p class="gallery-card-desc text-xs text-slate-300 mt-1">Ultra-soft plush microfibers on all body panels.</p>
+          </div>
+        </div>
+
+        <!-- Image 4: Steering Wheel & Dashboard Detailing -->
+        <div class="gallery-item gallery-card rounded-2xl aspect-[4/3] bg-slate-900 border border-slate-800" data-category="interior suv">
+          <img 
+            src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1200&q=80" 
+            alt="Clean Automotive Steering Wheel & Dash" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="gallery-overlay absolute inset-0 p-6 flex flex-col justify-end text-white">
+            <span class="text-[11px] font-bold text-yellow-400 uppercase tracking-wider">Cockpit Detail</span>
+            <h4 class="gallery-card-title font-serif text-lg font-bold">Dashboard &amp; Touchscreen Cleanse</h4>
+            <p class="gallery-card-desc text-xs text-slate-300 mt-1">Anti-dust coating and smudge-free glass.</p>
+          </div>
+        </div>
+
+        <!-- Image 5: Paint Swirl Removal & Machine Buffing -->
+        <div class="gallery-item gallery-card rounded-2xl aspect-[4/3] bg-slate-900 border border-slate-800" data-category="wash luxury">
+          <img 
+            src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1200&q=80" 
+            alt="Machine Polish and Paint Correction" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="gallery-overlay absolute inset-0 p-6 flex flex-col justify-end text-white">
+            <span class="text-[11px] font-bold text-yellow-400 uppercase tracking-wider">Paint Correction</span>
+            <h4 class="gallery-card-title font-serif text-lg font-bold">Rotary Swirl &amp; Scratch Removal</h4>
+            <p class="gallery-card-desc text-xs text-slate-300 mt-1">Restoring brilliant deep gloss on dark paintwork.</p>
+          </div>
+        </div>
+
+        <!-- Image 6: Wheel & Tire Detailing -->
+        <div class="gallery-item gallery-card rounded-2xl aspect-[4/3] bg-slate-900 border border-slate-800" data-category="wash suv">
+          <img 
+            src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80" 
+            alt="Wheel Barrel and Tire Cleaning" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="gallery-overlay absolute inset-0 p-6 flex flex-col justify-end text-white">
+            <span class="text-[11px] font-bold text-yellow-400 uppercase tracking-wider">Wheel Detailing</span>
+            <h4 class="gallery-card-title font-serif text-lg font-bold">Brake Dust De-Ironing &amp; Tire Shine</h4>
+            <p class="gallery-card-desc text-xs text-slate-300 mt-1">Non-acidic wheel face and barrel scrubbing.</p>
+          </div>
+        </div>
+
+        <!-- Image 7: High-End Luxury SUV Detailing -->
+        <div class="gallery-item gallery-card rounded-2xl aspect-[4/3] bg-slate-900 border border-slate-800" data-category="luxury suv">
+          <img 
+            src="https://images.unsplash.com/photo-1699323472812-9005bdfcb206?auto=format&fit=crop&w=1200&q=80" 
+            alt="Luxury SUV Detailing in Los Angeles" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="gallery-overlay absolute inset-0 p-6 flex flex-col justify-end text-white">
+            <span class="text-[11px] font-bold text-yellow-400 uppercase tracking-wider">Luxury SUV</span>
+            <h4 class="gallery-card-title font-serif text-lg font-bold">Full Exterior &amp; Glass Treatment</h4>
+            <p class="gallery-card-desc text-xs text-slate-300 mt-1">Connoisseur hand wash on high-end vehicles.</p>
+          </div>
+        </div>
+
+        <!-- Image 8: Executive Rear Seat & Leather Detail -->
+        <div class="gallery-item gallery-card rounded-2xl aspect-[4/3] bg-slate-900 border border-slate-800" data-category="interior luxury">
+          <img 
+            src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1200&q=80" 
+            alt="Rear Recliner Clean Leather Detailing" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="gallery-overlay absolute inset-0 p-6 flex flex-col justify-end text-white">
+            <span class="text-[11px] font-bold text-yellow-400 uppercase tracking-wider">Rear Cabin Detail</span>
+            <h4 class="gallery-card-title font-serif text-lg font-bold">Leather Rejuvenation &amp; Conditioning</h4>
+            <p class="gallery-card-desc text-xs text-slate-300 mt-1">Hospital-grade steam sanitation for all seats.</p>
+          </div>
+        </div>
+
+        <!-- Image 9: Sports Car Wet-Gloss Finish -->
+        <div class="gallery-item gallery-card rounded-2xl aspect-[4/3] bg-slate-900 border border-slate-800" data-category="luxury wash">
+          <img 
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" 
+            alt="Sports Car Showroom Gloss Finish" 
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="gallery-overlay absolute inset-0 p-6 flex flex-col justify-end text-white">
+            <span class="text-[11px] font-bold text-yellow-400 uppercase tracking-wider">High Gloss</span>
+            <h4 class="gallery-card-title font-serif text-lg font-bold">Showroom Wet Reflectivity</h4>
+            <p class="gallery-card-desc text-xs text-slate-300 mt-1">Hydrophobic sealant shielding paint against California heat.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Google Maps, Location & Service Area Section -->
+  <section id="location" class="py-24 bg-[#0B0D12] relative border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Official Location Info Card -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold uppercase tracking-widest">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Downtown Los Angeles Base
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+            Located in The Orsini Apartments
+          </h2>
+
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Headquartered in the heart of Downtown Los Angeles at <strong>550 N Figueroa St</strong> inside the <em>The Orsini Apartments</em> complex. Our mobile units deploy 24 hours a day across DTLA, Bunker Hill, Beverly Hills, Hollywood, and all of Los Angeles County.
+          </p>
+
+          <!-- Exact Details Box matching prompt -->
+          <div class="glass-card rounded-2xl p-6 space-y-4 border-yellow-500/30">
+            <div class="flex items-start gap-3">
+              <i data-lucide="building" class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+              <div>
+                <span class="text-xs text-slate-400 uppercase block">Address</span>
+                <span class="text-sm font-semibold text-white">550 N Figueroa St, Los Angeles, CA 90012, United States</span>
+                <span class="text-xs text-yellow-400 font-medium block mt-0.5">Located in: The Orsini Apartments</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 pt-3 border-t border-slate-800">
+              <i data-lucide="clock" class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+              <div>
+                <span class="text-xs text-slate-400 uppercase block">Operating Hours</span>
+                <span class="text-sm font-bold text-emerald-400 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 live-pulse inline-block"></span>
+                  Open 24 hours
+                </span>
+                <span class="text-xs text-slate-400">Available day, evening, and late night</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 pt-3 border-t border-slate-800">
+              <i data-lucide="phone-call" class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+              <div>
+                <span class="text-xs text-slate-400 uppercase block">Phone Contact</span>
+                <a href="tel:+13463773170" class="text-base font-bold text-white hover:text-yellow-400 transition-colors">
+                  +1 346-377-3170
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 pt-3 border-t border-slate-800">
+              <i data-lucide="compass" class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5"></i>
+              <div class="w-full">
+                <span class="text-xs text-slate-400 uppercase block">Google Plus Code</span>
+                <div class="flex items-center justify-between mt-0.5">
+                  <span class="font-mono text-sm text-yellow-400 font-bold">3Q63+MQ Los Angeles, California, USA</span>
+                  <button class="copy-text-btn text-xs text-slate-300 hover:text-yellow-400 ml-2" data-copy-text="3Q63+MQ Los Angeles, California, USA">
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Links matching Google Maps menu -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
+            <a href="https://maps.google.com/?q=550+N+Figueroa+St,+Los+Angeles,+CA+90012" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-yellow-400 text-center transition-colors">
+              <i data-lucide="navigation" class="w-4 h-4 text-yellow-400 mx-auto mb-1"></i>
+              <span class="text-[11px] font-semibold text-slate-200 block">Directions</span>
+            </a>
+            <button class="copy-text-btn p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-yellow-400 text-center transition-colors" data-copy-text="550 N Figueroa St, Los Angeles, CA 90012">
+              <i data-lucide="bookmark" class="w-4 h-4 text-yellow-400 mx-auto mb-1"></i>
+              <span class="text-[11px] font-semibold text-slate-200 block">Save</span>
+            </button>
+            <a href="tel:+13463773170" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-yellow-400 text-center transition-colors">
+              <i data-lucide="smartphone" class="w-4 h-4 text-yellow-400 mx-auto mb-1"></i>
+              <span class="text-[11px] font-semibold text-slate-200 block">Send To Phone</span>
+            </a>
+            <button class="copy-text-btn p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-yellow-400 text-center transition-colors" data-copy-text="Pure Intensions mobile car wash & detail | 550 N Figueroa St, Los Angeles, CA 90012 | Tel: +1 346-377-3170">
+              <i data-lucide="share-2" class="w-4 h-4 text-yellow-400 mx-auto mb-1"></i>
+              <span class="text-[11px] font-semibold text-slate-200 block">Share</span>
+            </button>
+          </div>
+
+          <!-- Service Radius Badges -->
+          <div class="space-y-2 pt-2">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Areas We Serve With Mobile Rigs:</span>
+            <div class="flex flex-wrap gap-1.5 text-[11px]">
+              <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Downtown LA (DTLA)</span>
+              <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded-md">The Orsini</span>
+              <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Bunker Hill</span>
+              <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Arts District</span>
+              <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Beverly Hills</span>
+              <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded-md">West Hollywood</span>
+              <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Silver Lake</span>
+              <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Glendale</span>
+              <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Pasadena</span>
+              <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Santa Monica</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Google Map Embed -->
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-3xl overflow-hidden border border-yellow-500/40 shadow-2xl relative">
+            <div class="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <i data-lucide="map" class="w-4 h-4 text-yellow-400"></i>
+                <span class="text-xs font-bold text-white uppercase tracking-wider">Live Maps View: 550 N Figueroa St, DTLA</span>
+              </div>
+              <a href="https://maps.google.com/?q=550+N+Figueroa+St,+Los+Angeles,+CA+90012" target="_blank" rel="noopener noreferrer" class="text-xs text-yellow-400 hover:underline font-semibold flex items-center gap-1">
+                Open Full Screen <i data-lucide="external-link" class="w-3 h-3"></i>
+              </a>
+            </div>
+
+            <div class="aspect-[16/11] w-full bg-slate-900 relative">
+              <iframe 
+                title="Pure Intensions Location Map"
+                src="https://maps.google.com/maps?q=550+N+Figueroa+St,+Los+Angeles,+CA+90012&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                class="w-full h-full border-0 filter contrast-[1.05]" 
+                allowfullscreen="" 
+                loading="lazy">
+              </iframe>
+            </div>
+
+            <div class="p-4 bg-slate-950/90 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+              <span class="text-slate-400">
+                🚀 Need a quick wash or detail? Mobile rigs are on standby 24/7 across LA.
+              </span>
+              <a href="tel:+13463773170" class="text-yellow-400 font-bold hover:underline flex items-center gap-1 flex-shrink-0">
+                Call +1 346-377-3170 &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Google Reviews & Testimonials Section (4.7 Stars, 34 Reviews) -->
+  <section id="reviews" class="py-24 bg-[#08090C] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold uppercase tracking-widest">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-yellow-400"></i> Client Endorsements
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+          Rated 4.7 Stars Across 34 Reviews
+        </h2>
+        <div class="flex items-center justify-center gap-2 pt-1">
+          <div class="flex text-yellow-400">
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 stroke-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 stroke-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 stroke-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 stroke-yellow-400"></i>
+            <i data-lucide="star-half" class="w-5 h-5 fill-yellow-400 stroke-yellow-400"></i>
+          </div>
+          <span class="text-white font-extrabold text-lg">4.7 / 5.0</span>
+          <span class="text-slate-400 text-sm">(34 Google verified reviews)</span>
+        </div>
+        <p class="text-slate-400 text-sm">
+          Hear from everyday commuters, family SUV drivers, residents at The Orsini, and car enthusiasts who love Pure Intensions.
+        </p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Review 1: Family SUV / Mom -->
+        <div class="glass-card rounded-2xl p-6 space-y-4 border-slate-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex text-yellow-400">
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+              </div>
+              <span class="text-[11px] text-slate-500">Verified Client</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed italic">
+              "With two toddlers and a golden retriever, our Toyota Highlander was a disaster zone of crushed snacks, juice stains, and dog hair. Pure Intensions came to our driveway and completely transformed the interior. Smells fresh, seats look brand new. Worth every penny."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-yellow-500/20 text-yellow-400 font-bold flex items-center justify-center text-xs">
+              SK
+            </div>
+            <div>
+              <span class="text-xs font-bold text-white block">Sarah K.</span>
+              <span class="text-[10px] text-slate-400">Toyota Highlander &bull; Los Angeles</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2: The Orsini Resident -->
+        <div class="glass-card rounded-2xl p-6 space-y-4 border-slate-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex text-yellow-400">
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+              </div>
+              <span class="text-[11px] text-slate-500">The Orsini Resident</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed italic">
+              "Living right here at The Orsini Apartments on Figueroa, having Pure Intensions on-site is unbeatable. They washed and vacuumed my Honda Civic inside the garage structure without leaving water puddles. Super professional, polite, and fast."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-xs">
+              MR
+            </div>
+            <div>
+              <span class="text-xs font-bold text-white block">Marcus R.</span>
+              <span class="text-[10px] text-slate-400">The Orsini Resident &bull; Honda Civic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3: 24/7 Midnight Emergency Service -->
+        <div class="glass-card rounded-2xl p-6 space-y-4 border-slate-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex text-yellow-400">
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+              </div>
+              <span class="text-[11px] text-slate-500">24/7 Night Call</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed italic">
+              "Spilled a full venti iced coffee all over my passenger seat and carpet at 10 PM. Called their 24-hour line at (346) 377-3170. Tech was dispatched and steam extracted everything before it soaked into the foam cushion. Incredible late-night service!"
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-purple-500/20 text-purple-400 font-bold flex items-center justify-center text-xs">
+              JL
+            </div>
+            <div>
+              <span class="text-xs font-bold text-white block">Jason L.</span>
+              <span class="text-[10px] text-slate-400">Tesla Model 3 &bull; Downtown LA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4: Truck Owner -->
+        <div class="glass-card rounded-2xl p-6 space-y-4 border-slate-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex text-yellow-400">
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+              </div>
+              <span class="text-[11px] text-slate-500">Verified Client</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed italic">
+              "My Ford F-150 had red dirt and construction dust caked into the wheel arches and underbody. Pure Intensions brought their high-pressure foam cannon and got into every crevice. Best mobile truck wash in LA."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-xs">
+              TC
+            </div>
+            <div>
+              <span class="text-xs font-bold text-white block">Tony C.</span>
+              <span class="text-[10px] text-slate-400">Ford F-150 &bull; Arts District</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5: BMW Commuter -->
+        <div class="glass-card rounded-2xl p-6 space-y-4 border-slate-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex text-yellow-400">
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star-half" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+              </div>
+              <span class="text-[11px] text-slate-500">Verified Client</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed italic">
+              "Had swirl marks on my black BMW 4-Series from tunnel car washes. Their technician did a machine polish and finished with ceramic sealant. The mirror reflection is stunning. Never taking my car through an automatic wash again."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-rose-500/20 text-rose-400 font-bold flex items-center justify-center text-xs">
+              EA
+            </div>
+            <div>
+              <span class="text-xs font-bold text-white block">Eric A.</span>
+              <span class="text-[10px] text-slate-400">BMW 4-Series &bull; Bunker Hill</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6: Luxury Sedan Owner -->
+        <div class="glass-card rounded-2xl p-6 space-y-4 border-slate-800 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex text-yellow-400">
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+              </div>
+              <span class="text-[11px] text-slate-500">Verified Client</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed italic">
+              "They treat your vehicle like their own. Whether it's an everyday sedan or high-end luxury vehicle, the attention to detail on the leather seats, air vents, and rims is second to none. Truly 5-star service in DTLA."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-yellow-500/20 text-yellow-400 font-bold flex items-center justify-center text-xs">
+              CR
+            </div>
+            <div>
+              <span class="text-xs font-bold text-white block">Camila R.</span>
+              <span class="text-[10px] text-slate-400">Mercedes-Benz E-Class &bull; Beverly Hills</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="https://maps.google.com/?q=550+N+Figueroa+St,+Los+Angeles,+CA+90012" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-yellow-400 text-xs font-bold text-slate-200 transition-colors">
+          <i data-lucide="message-square" class="w-4 h-4 text-yellow-400"></i>
+          <span>Read All 34 Google Reviews &amp; Add Your Rating &rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section (Accordion) -->
+  <section class="py-24 bg-[#0B0D12] relative border-t border-slate-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold uppercase tracking-widest">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i> Clear Answers
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm">
+          Everything you need to know about our mobile car wash and detailing service across Los Angeles.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="glass-card rounded-xl p-5 border-slate-800 group">
+          <summary class="flex items-center justify-between cursor-pointer list-none text-sm font-bold text-white group-hover:text-yellow-400 transition-colors">
+            <span>What vehicles do you wash and detail?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-yellow-400 transition-transform duration-300"></i>
+          </summary>
+          <div class="pt-4 text-xs text-slate-300 leading-relaxed border-t border-slate-800/80 mt-3">
+            We service all vehicles! Sedans, coupes, hatchbacks, electric vehicles (Teslas, Rivians, etc.), family crossovers, large SUVs, pickup trucks, work vans, as well as sports cars and luxury exotics. We have customized equipment and formulas for all paint finishes and interior materials.
+          </div>
+        </details>
+
+        <details class="glass-card rounded-xl p-5 border-slate-800 group">
+          <summary class="flex items-center justify-between cursor-pointer list-none text-sm font-bold text-white group-hover:text-yellow-400 transition-colors">
+            <span>Do you need access to water or electricity at my home or building?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-yellow-400 transition-transform duration-300"></i>
+          </summary>
+          <div class="pt-4 text-xs text-slate-300 leading-relaxed border-t border-slate-800/80 mt-3">
+            No, our mobile vans are 100% self-contained! We carry our own filtered deionized water tanks (0-PPM TDS for spot-free drying) and quiet commercial power generators. We can detail your vehicle on the street, in a driveway, parking lot, or underground garage without hooking up to your utilities.
+          </div>
+        </details>
+
+        <details class="glass-card rounded-xl p-5 border-slate-800 group">
+          <summary class="flex items-center justify-between cursor-pointer list-none text-sm font-bold text-white group-hover:text-yellow-400 transition-colors">
+            <span>Can you wash inside apartment parking garages like The Orsini?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-yellow-400 transition-transform duration-300"></i>
+          </summary>
+          <div class="pt-4 text-xs text-slate-300 leading-relaxed border-t border-slate-800/80 mt-3">
+            Yes! Because our headquarters are located directly at The Orsini Apartments (550 N Figueroa St), we are specialized in zero-runoff dry-steam and rinseless washing techniques that are 100% compliant with underground garage rules and HOA policies.
+          </div>
+        </details>
+
+        <details class="glass-card rounded-xl p-5 border-slate-800 group">
+          <summary class="flex items-center justify-between cursor-pointer list-none text-sm font-bold text-white group-hover:text-yellow-400 transition-colors">
+            <span>Are you truly open and available 24 hours a day?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-yellow-400 transition-transform duration-300"></i>
+          </summary>
+          <div class="pt-4 text-xs text-slate-300 leading-relaxed border-t border-slate-800/80 mt-3">
+            Yes. We operate round-the-clock 24/7. Whether you need an early morning wash before work, an overnight turnaround while you sleep, or a late-night emergency spill cleanup, our dispatch team can be reached anytime at +1 346-377-3170.
+          </div>
+        </details>
+
+        <details class="glass-card rounded-xl p-5 border-slate-800 group">
+          <summary class="flex items-center justify-between cursor-pointer list-none text-sm font-bold text-white group-hover:text-yellow-400 transition-colors">
+            <span>How does your custom quote work?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-yellow-400 transition-transform duration-300"></i>
+          </summary>
+          <div class="pt-4 text-xs text-slate-300 leading-relaxed border-t border-slate-800/80 mt-3">
+            Every vehicle is unique in size and condition. Simply let us know your vehicle make/model and desired package (or text us photos of your car to +1 346-377-3170), and we will provide an instant, upfront custom quote with zero surprise fees.
+          </div>
+        </details>
+
+        <details class="glass-card rounded-xl p-5 border-slate-800 group">
+          <summary class="flex items-center justify-between cursor-pointer list-none text-sm font-bold text-white group-hover:text-yellow-400 transition-colors">
+            <span>What payment methods do you accept?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-yellow-400 transition-transform duration-300"></i>
+          </summary>
+          <div class="pt-4 text-xs text-slate-300 leading-relaxed border-t border-slate-800/80 mt-3">
+            We accept all major credit and debit cards (Visa, MasterCard, Amex), Apple Pay, Google Pay, Zelle, Venmo, and Cash.
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 24/7 VIP Mobile Dispatch Contact Form -->
+  <section id="contact" class="py-24 bg-[#08090C] relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border-yellow-500/40 shadow-2xl relative overflow-hidden">
+        
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-yellow-500/5 blur-3xl pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-bold uppercase tracking-widest">
+              <i data-lucide="calendar" class="w-3.5 h-3.5"></i> Request Free Quote
+            </div>
+
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+              Schedule Your 24/7 Mobile Wash
+            </h2>
+
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Fill out your vehicle and address details. Our local Los Angeles dispatch team will confirm your appointment within minutes.
+            </p>
+
+            <div class="space-y-3 text-xs text-slate-300 pt-2">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 flex-shrink-0">
+                  <i data-lucide="phone-call" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <span class="text-slate-400 block text-[10px] uppercase">Immediate Phone Dispatch</span>
+                  <a href="tel:+13463773170" class="font-bold text-yellow-400 text-sm hover:underline">+1 346-377-3170</a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 flex-shrink-0">
+                  <i data-lucide="map-pin" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <span class="text-slate-400 block text-[10px] uppercase">Headquarters</span>
+                  <span class="font-semibold text-white">550 N Figueroa St, The Orsini, DTLA 90012</span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 flex-shrink-0">
+                  <i data-lucide="clock" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <span class="text-slate-400 block text-[10px] uppercase">Service Hours</span>
+                  <span class="font-bold text-emerald-400">Open 24 Hours / 7 Days A Week</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 text-xs text-slate-300">
+              ⚡ <strong>Prefer WhatsApp or SMS?</strong> You can text your location and car model directly to <span class="text-yellow-400 font-bold">+1 (346) 377-3170</span> for an instant quote!
+            </div>
+          </div>
+
+          <!-- Form Column -->
+          <div class="lg:col-span-7">
+            <form id="contact-booking-form" class="space-y-4" onsubmit="event.preventDefault(); showToast('Appointment request received! Dispatch will call or text you shortly.'); this.reset();">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+                  <input type="text" required placeholder="e.g. John Smith" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-yellow-500 transition-colors">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number (Call or SMS) *</label>
+                  <input type="tel" required placeholder="e.g. (346) 377-3170" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-yellow-500 transition-colors">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1">Vehicle Make, Model &amp; Year *</label>
+                  <input type="text" required placeholder="e.g. Honda Civic, Toyota RAV4, Ford F-150" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-yellow-500 transition-colors">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1">Service Package *</label>
+                  <select class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-yellow-500 transition-colors">
+                    <option value="Complete Signature Full Detail">Complete Signature Full Detail</option>
+                    <option value="Deep Interior Steam &amp; Shampoo">Deep Interior Steam &amp; Shampoo</option>
+                    <option value="Pure Mobile Foam Hand Wash &amp; Wax">Pure Mobile Foam Hand Wash &amp; Wax</option>
+                    <option value="Paint Correction &amp; Machine Polish">Paint Correction &amp; Machine Polish</option>
+                    <option value="9H Ceramic &amp; Graphene Coating">9H Ceramic &amp; Graphene Coating</option>
+                    <option value="The Orsini &amp; High-Rise Concierge">The Orsini &amp; High-Rise Concierge</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Service Address / Location in LA *</label>
+                <input type="text" required placeholder="e.g. 550 N Figueroa St / Home Driveway / Office Parking" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-yellow-500 transition-colors">
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1">Preferred Date</label>
+                  <input type="date" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-yellow-500 transition-colors">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1">Preferred Time (Open 24/7)</label>
+                  <select class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-yellow-500 transition-colors">
+                    <option value="ASAP (Immediate 24/7 Dispatch)">⚡ ASAP (Immediate 24/7 Dispatch)</option>
+                    <option value="Morning (7:00 AM - 11:00 AM)">Morning (7:00 AM - 11:00 AM)</option>
+                    <option value="Afternoon (11:00 AM - 4:00 PM)">Afternoon (11:00 AM - 4:00 PM)</option>
+                    <option value="Evening (4:00 PM - 9:00 PM)">Evening (4:00 PM - 9:00 PM)</option>
+                    <option value="Late Night / Overnight (9:00 PM - 4:00 AM)">Late Night / Overnight (9:00 PM - 4:00 AM)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Special Notes / Add-ons / Gate Code</label>
+                <textarea rows="2" placeholder="e.g. Pet hair removal needed, park in guest stall #12" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-yellow-500 transition-colors"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl shimmer-btn text-black font-extrabold uppercase tracking-wider text-xs shadow-xl flex items-center justify-center gap-2 hover:scale-[1.01] transition-transform">
+                <i data-lucide="send" class="w-4 h-4"></i> Request 24/7 Mobile Detailing Dispatch
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Luxury Footer -->
+  <footer class="bg-[#050608] border-t border-slate-900 py-16 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-yellow-500 flex items-center justify-center text-black font-bold shadow-md">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="font-serif text-base font-bold text-white block uppercase tracking-wider">Pure Intensions</span>
+              <span class="text-[10px] text-yellow-400 uppercase tracking-widest block font-medium">Mobile Car Wash &amp; Detail</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Los Angeles’ premier 24-hour mobile car wash and detailing service. Servicing all makes and models: sedans, SUVs, trucks, EVs, and luxury vehicles.
+          </p>
+          <div class="flex items-center gap-2 text-yellow-400 font-semibold text-xs">
+            <i data-lucide="star" class="w-4 h-4 fill-yellow-400 stroke-yellow-400"></i>
+            <span>4.7 Star Rating &bull; 34 Google Reviews</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider">Quick Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="#3d-studio" class="text-yellow-400 font-semibold hover:underline">3D Detailing Simulator</a></li>
+            <li><a href="#vehicles" class="hover:text-yellow-400 transition-colors">All Makes &amp; Models</a></li>
+            <li><a href="#services" class="hover:text-yellow-400 transition-colors">Detailing Services</a></li>
+            <li><a href="#calculator" class="hover:text-yellow-400 transition-colors">Custom Quote Builder</a></li>
+            <li><a href="#before-after" class="hover:text-yellow-400 transition-colors">Before &amp; After Transformations</a></li>
+            <li><a href="#gallery" class="hover:text-yellow-400 transition-colors">Car Wash Gallery</a></li>
+            <li><a href="#location" class="hover:text-yellow-400 transition-colors">The Orsini Location &amp; Map</a></li>
+          </ul>
+        </div>
+
+        <!-- Official Coordinates & Google Plus Code -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider">Headquarters &amp; Hours</h4>
+          <p class="text-xs text-slate-300">
+            <strong>550 N Figueroa St</strong><br>
+            Los Angeles, CA 90012, United States<br>
+            <span class="text-yellow-400">Located in: The Orsini Apartments</span>
+          </p>
+          <p class="text-xs text-emerald-400 font-bold flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span>
+            Open 24 hours (7 Days a Week)
+          </p>
+          <p class="text-xs font-mono text-slate-400">
+            Plus Code: <span class="text-yellow-400 font-bold">3Q63+MQ</span> Los Angeles
+          </p>
+        </div>
+
+        <!-- Direct Contact -->
+        <div class="space-y-3">
+          <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider">24/7 Mobile Dispatch</h4>
+          <p class="text-xs text-slate-300">
+            Call or text anytime for immediate on-demand mobile dispatch:
+          </p>
+          <a href="tel:+13463773170" class="block font-bold text-base text-yellow-400 hover:underline">
+            +1 346-377-3170
+          </a>
+          <button class="open-booking-modal-btn w-full mt-2 py-2.5 rounded-lg shimmer-btn text-black font-extrabold uppercase text-[11px] tracking-wider shadow">
+            Book Mobile Unit Online
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-slate-900/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+        <div>
+          &copy; 2026 Pure Intensions Mobile Car Wash &amp; Detail. All rights reserved. 550 N Figueroa St, Los Angeles, CA 90012.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-slate-300">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-300">Terms of Service</a>
+          <a href="#location" class="hover:text-slate-300">Service Areas</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Quick Action Bar -->
+  <div class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 z-40 flex items-center gap-2">
+    <!-- Floating Call Button -->
+    <a href="tel:+13463773170" class="flex-1 sm:flex-initial px-4 py-3 rounded-full bg-slate-900/95 border-2 border-yellow-500 text-yellow-400 font-bold text-xs shadow-2xl flex items-center justify-center gap-2 backdrop-blur-md hover:scale-105 transition-transform" title="Call 24/7 Mobile Detailing">
+      <i data-lucide="phone-call" class="w-4 h-4"></i>
+      <span>Call 24/7: (346) 377-3170</span>
+    </a>
+
+    <!-- Floating Quick Book Button -->
+    <button class="open-booking-modal-btn px-5 py-3 rounded-full shimmer-btn text-black font-extrabold text-xs shadow-2xl flex items-center justify-center gap-2 hover:scale-105 transition-transform uppercase tracking-wider" title="Book Mobile Detail">
+      <i data-lucide="calendar" class="w-4 h-4"></i>
+      <span class="hidden sm:inline">Book Mobile</span>
+      <span class="sm:hidden">Book</span>
+    </button>
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="modal-overlay fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="modal-content glass-card rounded-2xl max-w-lg w-full p-6 sm:p-8 border-yellow-500/50 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      
+      <button id="booking-modal-close" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-white rounded-lg">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-5 space-y-1">
+        <div class="flex items-center gap-2 text-yellow-400 text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Pure Intensions Mobile Dispatch
+        </div>
+        <h3 class="font-serif text-xl sm:text-2xl font-bold text-white">Book Mobile Car Wash</h3>
+        <p class="text-xs text-slate-400">Headquartered at The Orsini (550 N Figueroa St). Open 24/7 across Los Angeles.</p>
+      </div>
+
+      <form id="booking-form" class="space-y-3.5 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">Your Name *</label>
+          <input type="text" id="modal-name" required placeholder="John Smith" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-yellow-500">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Phone Number *</label>
+            <input type="tel" id="modal-phone" required placeholder="(346) 377-3170" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-yellow-500">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Vehicle Model &amp; Year *</label>
+            <input type="text" id="modal-carmodel" required placeholder="e.g. Honda Civic / RAV4 / F-150" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-yellow-500">
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">Select Service Package *</label>
+          <select id="modal-package-select" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-yellow-500">
+            <option value="Complete Signature Full Detail">Complete Signature Full Detail</option>
+            <option value="Deep Interior Steam &amp; Shampoo">Deep Interior Steam &amp; Shampoo</option>
+            <option value="Pure Mobile Foam Hand Wash &amp; Wax">Pure Mobile Foam Hand Wash &amp; Wax</option>
+            <option value="Paint Correction &amp; Machine Polish">Paint Correction &amp; Machine Polish</option>
+            <option value="9H Ceramic &amp; Graphene Coating">9H Ceramic &amp; Graphene Coating</option>
+            <option value="The Orsini &amp; High-Rise Concierge">The Orsini &amp; High-Rise Concierge</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">Service Address / Location (Los Angeles Area) *</label>
+          <input type="text" id="modal-address" required placeholder="Street address, home driveway or building parking" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-yellow-500">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Preferred Date</label>
+            <input type="date" id="modal-date" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-yellow-500">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Preferred Time</label>
+            <select id="modal-time" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-yellow-500">
+              <option value="⚡ ASAP (Immediate 24/7 Dispatch)">⚡ ASAP (Immediate 24/7 Dispatch)</option>
+              <option value="Morning (7:00 AM - 11:00 AM)">Morning (7:00 AM - 11:00 AM)</option>
+              <option value="Afternoon (11:00 AM - 4:00 PM)">Afternoon (11:00 AM - 4:00 PM)</option>
+              <option value="Evening (4:00 PM - 9:00 PM)">Evening (4:00 PM - 9:00 PM)</option>
+              <option value="Late Night / Overnight (9:00 PM - 4:00 AM)">Late Night / Overnight (9:00 PM - 4:00 AM)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">Additional Notes / Gate Code / Specific Requests</label>
+          <textarea id="modal-notes" rows="2" placeholder="Specific requirements or vehicle notes" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2 text-white focus:outline-none focus:border-yellow-500"></textarea>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3.5 rounded-xl shimmer-btn text-black font-extrabold uppercase tracking-wider text-xs shadow-lg flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i> Submit Mobile Reservation
+          </button>
+        </div>
+
+        <p class="text-[11px] text-center text-slate-400 mt-2">
+          Or call our 24-hour hotline directly: <a href="tel:+13463773170" class="text-yellow-400 font-bold hover:underline">+1 346-377-3170</a>
+        </p>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div id="lightbox-modal" class="modal-overlay fixed inset-0 z-50 bg-black/95 backdrop-blur-lg flex items-center justify-center p-4">
+    <button id="lightbox-close" class="absolute top-5 right-5 p-3 text-slate-300 hover:text-white bg-slate-900/80 rounded-full border border-slate-700 z-10">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+    <div class="max-w-4xl w-full text-center space-y-4">
+      <div class="max-h-[75vh] flex items-center justify-center overflow-hidden rounded-2xl border border-yellow-500/30 shadow-2xl">
+        <img id="lightbox-image" src="" alt="Enlarged Car Detailing Photo" class="max-h-[75vh] w-auto object-contain rounded-2xl">
+      </div>
+      <div>
+        <h4 id="lightbox-title" class="font-serif text-xl font-bold text-white"></h4>
+        <p id="lightbox-desc" class="text-xs text-yellow-400 font-medium mt-1"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- 3D Detailing Bay Logic -->
+  <script src="three-studio.js"></script>
+
+  <!-- Custom Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
